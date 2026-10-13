@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Student Profile</string>
+
+    <!-- ⭐ Strings cho Bài 15 -->
+    <string name="title_student_profile">Hồ sơ Sinh viên</string>
+    <string name="hint_gpa_input">Nhập GPA mới (0.0 - 4.0)</string>
+    <string name="btn_update_gpa">Cập Nhật Điểm GPA</string>
+    <string name="btn_reset">Khôi Phục Mặc Định</string>
+    <string name="error_gpa_invalid">GPA phải từ 0.0 đến 4.0</string>
+    <string name="toast_update_success">Đã cập nhật GPA thành công!</string>
+    <string name="toast_reset_success">Đã khôi phục về dữ liệu mặc định</string>
+    <string name="honor_badge">⭐ Sinh viên Danh dự</string>
+    <string name="default_name">Chưa có tên</string>
+    <string name="default_gpa">0.0 GPA</string>
+</resources>

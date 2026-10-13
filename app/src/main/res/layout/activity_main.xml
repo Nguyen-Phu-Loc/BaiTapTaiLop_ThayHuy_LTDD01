@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ═══════════════════════════════════════════════
+             THẺ 1: HỒ SƠ SINH VIÊN (CardView)
+             ═══════════════════════════════════════════════ -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="@color/card_bg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="20dp">
+
+                <!-- Avatar -->
+                <ImageView
+                    android:id="@+id/imgAvatar"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@android:drawable/sym_def_app_icon"
+                    android:background="@color/card_bg_light"
+                    android:padding="8dp"
+                    android:contentDescription="Avatar" />
+
+                <!-- Tên sinh viên -->
+                <TextView
+                    android:id="@+id/tvStudentName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/default_name" />
+
+                <!-- MSSV + Lớp -->
+                <TextView
+                    android:id="@+id/tvStudentDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginTop="4dp"
+                    android:text="MSSV: ... • Lớp: ..." />
+
+                <!-- Email -->
+                <TextView
+                    android:id="@+id/tvStudentEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginTop="2dp"
+                    android:text="Email: ..." />
+
+                <!-- Badge GPA -->
+                <TextView
+                    android:id="@+id/tvGpaBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/accent_gold"
+                    android:padding="10dp"
+                    android:background="@color/card_bg_light"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/default_gpa" />
+
+                <!-- Honor Badge -->
+                <TextView
+                    android:id="@+id/tvHonorBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textStyle="italic"
+                    android:textColor="@color/accent_gold"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone"
+                    android:text="@string/honor_badge" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ═══════════════════════════════════════════════
+             THẺ 2: FORM CẬP NHẬT GPA
+             ═══════════════════════════════════════════════ -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="@color/card_bg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Tiêu đề form -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cập nhật điểm"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Ô nhập GPA -->
+                <EditText
+                    android:id="@+id/edtGpaInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_gpa_input"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_secondary"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Preview xếp loại -->
+                <TextView
+                    android:id="@+id/tvPreviewRanking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    android:textColor="@color/accent_gold"
+                    android:visibility="gone"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Nút Cập nhật -->
+                <Button
+                    android:id="@+id/btnUpdateGpa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_update_gpa"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/btn_green"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Nút Reset -->
+                <Button
+                    android:id="@+id/btnReset"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_reset"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/btn_gray" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>
